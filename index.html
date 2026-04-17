@@ -6,78 +6,102 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+/* ---------- BASE ---------- */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #f8fafc;
+    background: linear-gradient(to bottom, #f8fafc, #e0f2fe);
     color: #0f172a;
 }
 
-/* HEADER */
+/* ---------- HEADER ---------- */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 15px;
     text-align: center;
     font-size: 22px;
     font-weight: bold;
-    background: linear-gradient(to right, #e0f2fe, #bae6fd);
-    color: #0369a1;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e2e8f0;
 }
 
-/* GRID */
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* ---------- GRID ---------- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
 }
 
-/* CARD */
+/* ---------- CARD ---------- */
 .card {
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    cursor: pointer;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
-/* PREVIEW */
-.preview {
-    font-size: 14px;
-    color: #475569;
-    margin-top: 10px;
-}
-
-/* BUTTON */
+/* ---------- BUTTON ---------- */
 .btn {
-    margin-top: 10px;
-    padding: 8px 12px;
+    margin-top: 8px;
+    padding: 6px 12px;
     border: none;
-    background: #38bdf8;
+    background: linear-gradient(to right, #38bdf8, #0ea5e9);
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 13px;
 }
 
-/* BACK */
+/* ---------- BACK ---------- */
 .back {
     padding: 15px;
     cursor: pointer;
     color: #0284c7;
+    font-weight: 500;
 }
 
-/* CONTENT */
+/* ---------- CONTENT ---------- */
 .content {
-    padding: 20px;
     background: white;
-    margin: 15px;
-    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    line-height: 1.8;
 }
 
-/* POPUP */
+/* ---------- TEXT STYLE ---------- */
+h3 {
+    color: #0284c7;
+    margin-top: 10px;
+}
+
+blockquote {
+    border-left: 4px solid #38bdf8;
+    padding-left: 12px;
+    margin: 10px 0;
+    color: #475569;
+}
+
+/* ---------- POPUP ---------- */
 .popup {
     position: fixed;
     bottom: 20px;
@@ -86,13 +110,14 @@ header {
     background: #0ea5e9;
     color: white;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     opacity: 0;
     transition: 0.3s;
 }
 .popup.show {
     opacity: 1;
 }
+
 </style>
 </head>
 
@@ -101,6 +126,9 @@ header {
 <header>B.Ed Smart Notes</header>
 
 <div id="app"></div>
+
+<footer>Simple Notes • Easy Learning • B.Ed</footer>
+
 <div id="popup" class="popup">Link Copied 🔗</div>
 
 <script>
@@ -109,6 +137,7 @@ let app = document.getElementById("app");
 let popup = document.getElementById("popup");
 
 let state = {};
+let isSharedView = false;
 
 /* ---------- LANGUAGE ---------- */
 
@@ -131,11 +160,11 @@ function showSubjects() {
     app.innerHTML = `
     <div class="back" onclick="showLanguage()">⬅ Back</div>
     <div class="grid">
-        <div class="card" onclick="showUnits('pedagogy')">Pedagogy of Teaching</div>
+        <div class="card" onclick="showUnits('pedagogy')">Pedagogy</div>
         <div class="card" onclick="showUnits('psychology')">Educational Psychology</div>
         <div class="card" onclick="showUnits('english')">English Teaching</div>
         <div class="card" onclick="showUnits('tamil')">Tamil Teaching</div>
-        <div class="card" onclick="showUnits('assessment')">Assessment & Evaluation</div>
+        <div class="card" onclick="showUnits('assessment')">Assessment</div>
     </div>`;
 }
 
@@ -152,7 +181,7 @@ function showUnits(subject) {
     </div>`;
 }
 
-/* ---------- QUESTIONS (PREVIEW MODE) ---------- */
+/* ---------- QUESTIONS ---------- */
 
 function showQuestions(unit) {
     state.unit = unit;
@@ -160,14 +189,12 @@ function showQuestions(unit) {
     app.innerHTML = `
     <div class="back" onclick="showUnits(state.subject)">⬅ Back</div>
     <div class="grid">
-
         ${createCard('q1')}
         ${createCard('q2')}
-
     </div>`;
 }
 
-/* ---------- CARD WITH PREVIEW ---------- */
+/* ---------- CARD ---------- */
 
 function createCard(q) {
     let link = getLink(q);
@@ -175,7 +202,7 @@ function createCard(q) {
     return `
     <div class="card">
         <b>10 Mark ${q.toUpperCase()}</b>
-        <div class="preview">Simple explanation with example...</div>
+        <p style="font-size:13px;color:#64748b;">Easy explanation + example</p>
         <button class="btn" onclick="loadAnswer('${q}')">Read More</button>
         <button class="btn" onclick="copyLink('${link}')">Copy Link</button>
     </div>`;
@@ -199,22 +226,31 @@ function loadAnswer(q) {
     let path = `content/${state.lang}/sem1-${state.subject}-${state.unit}-${q}.txt`;
 
     fetch(path)
-    .then(res => res.text())
+    .then(res => {
+        if (!res.ok) throw new Error();
+        return res.text();
+    })
     .then(data => {
 
         let link = getLink(q);
 
+        let backBtn = isSharedView ? "" :
+        `<div class="back" onclick="showQuestions(state.unit)">⬅ Back</div>`;
+
         app.innerHTML = `
-        <div class="back" onclick="showQuestions(state.unit)">⬅ Back</div>
+        ${backBtn}
         <div class="content">
             ${formatText(data)}
             <br><br>
             <button class="btn" onclick="copyLink('${link}')">Copy Link 🔗</button>
         </div>`;
+    })
+    .catch(() => {
+        app.innerHTML = `<div class="content">❌ Answer not available</div>`;
     });
 }
 
-/* ---------- LINK SYSTEM ---------- */
+/* ---------- LINK ---------- */
 
 function getLink(q) {
     return `${location.origin}${location.pathname}?lang=${state.lang}&sub=${state.subject}&unit=${state.unit}&q=${q}`;
@@ -225,10 +261,7 @@ function getLink(q) {
 function copyLink(link) {
     navigator.clipboard.writeText(link);
     popup.classList.add("show");
-
-    setTimeout(() => {
-        popup.classList.remove("show");
-    }, 2000);
+    setTimeout(() => popup.classList.remove("show"), 2000);
 }
 
 /* ---------- LOAD FROM URL ---------- */
@@ -237,6 +270,8 @@ function loadFromURL() {
     let params = new URLSearchParams(window.location.search);
 
     if (params.get("q")) {
+        isSharedView = true;
+
         state.lang = params.get("lang");
         state.subject = params.get("sub");
         state.unit = params.get("unit");
@@ -247,6 +282,7 @@ function loadFromURL() {
     }
 }
 
+/* INIT */
 loadFromURL();
 
 </script>

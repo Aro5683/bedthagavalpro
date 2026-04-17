@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>B.Ed Smart Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    padding: 15px;
+    text-align: center;
+    background: #1e293b;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+}
+
+.back {
+    padding: 10px;
+    cursor: pointer;
+    color: skyblue;
+}
+</style>
+</head>
+
+<body>
+
+<header>B.Ed Smart Notes</header>
+
+<div id="app"></div>
+
+<script>
+
+let app = document.getElementById("app");
+
+/* ---------- STEP DATA ---------- */
+
+let state = {};
+
+/* ---------- UI ---------- */
+
+function showSubjects() {
+    app.innerHTML = `
+    <div class="grid">
+        <div class="card" onclick="showUnits('pedagogy')">Pedagogy</div>
+        <div class="card" onclick="showUnits('psychology')">Psychology</div>
+    </div>
+    `;
+}
+
+function showUnits(subject) {
+    state.subject = subject;
+
+    app.innerHTML = `
+    <div class="back" onclick="showSubjects()">⬅ Back</div>
+    <div class="grid">
+        <div class="card" onclick="showQuestions('unit1')">Unit 1</div>
+        <div class="card" onclick="showQuestions('unit2')">Unit 2</div>
+    </div>
+    `;
+}
+
+function showQuestions(unit) {
+    state.unit = unit;
+
+    app.innerHTML = `
+    <div class="back" onclick="showUnits(state.subject)">⬅ Back</div>
+    <div class="grid">
+        <div class="card" onclick="loadAnswer('q1')">10 Mark Question 1</div>
+        <div class="card" onclick="loadAnswer('q2')">10 Mark Question 2</div>
+    </div>
+    `;
+}
+
+/* ---------- LOAD ANSWER ---------- */
+
+function loadAnswer(q) {
+
+    let path = `content/sem1-${state.subject}-${state.unit}-${q}.html`;
+
+    fetch(path)
+    .then(res => res.text())
+    .then(data => {
+        app.innerHTML = `
+        <div class="back" onclick="showQuestions(state.unit)">⬅ Back</div>
+        <div class="content">${data}</div>
+        `;
+    })
+    .catch(() => {
+        app.innerHTML = "<p>Content not found</p>";
+    });
+}
+
+/* INIT */
+showSubjects();
+
+</script>
+
+</body>
+</html>

@@ -9,32 +9,29 @@
 
 /* ---------- BASE ---------- */
 body {
-    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: linear-gradient(to bottom, #f8fafc, #e0f2fe);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
     color: #0f172a;
 }
 
-/* ---------- HEADER ---------- */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 15px;
+/* ---------- NEW PREMIUM HEADER ---------- */
+.header-box {
     text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e2e8f0;
+    padding: 30px 15px;
+    background: linear-gradient(to right, #e0f2fe, #f0f9ff);
 }
 
-/* ---------- FOOTER ---------- */
-footer {
-    text-align: center;
-    padding: 15px;
+.header-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #0284c7;
+}
+
+.header-sub {
+    margin-top: 8px;
     font-size: 14px;
-    color: #64748b;
+    color: #475569;
 }
 
 /* ---------- GRID ---------- */
@@ -47,15 +44,15 @@ footer {
 
 /* ---------- CARD ---------- */
 .card {
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-    padding: 18px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
     border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    padding: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
 /* ---------- BUTTON ---------- */
@@ -63,41 +60,36 @@ footer {
     margin-top: 8px;
     padding: 6px 12px;
     border: none;
-    background: linear-gradient(to right, #38bdf8, #0ea5e9);
-    color: white;
     border-radius: 10px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: white;
     cursor: pointer;
-    font-size: 13px;
 }
 
 /* ---------- BACK ---------- */
 .back {
     padding: 15px;
-    cursor: pointer;
     color: #0284c7;
+    cursor: pointer;
     font-weight: 500;
 }
 
 /* ---------- CONTENT ---------- */
 .content {
-    background: white;
     margin: 20px;
-    padding: 20px;
+    padding: 25px;
     border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
     line-height: 1.8;
 }
 
-/* ---------- TEXT STYLE ---------- */
-h3 {
-    color: #0284c7;
-    margin-top: 10px;
-}
+/* ---------- TEXT ---------- */
+h3 { color: #0284c7; }
 
 blockquote {
     border-left: 4px solid #38bdf8;
     padding-left: 12px;
-    margin: 10px 0;
     color: #475569;
 }
 
@@ -114,20 +106,20 @@ blockquote {
     opacity: 0;
     transition: 0.3s;
 }
-.popup.show {
-    opacity: 1;
-}
+.popup.show { opacity: 1; }
 
 </style>
 </head>
 
 <body>
 
-<header>B.Ed Smart Notes</header>
+<!-- HEADER -->
+<div class="header-box">
+    <div class="header-title">B.Ed Smart Notes</div>
+    <div class="header-sub">Fast • Clear • Exam Ready</div>
+</div>
 
 <div id="app"></div>
-
-<footer>Simple Notes • Easy Learning • B.Ed</footer>
 
 <div id="popup" class="popup">Link Copied 🔗</div>
 
@@ -161,9 +153,9 @@ function showSubjects() {
     <div class="back" onclick="showLanguage()">⬅ Back</div>
     <div class="grid">
         <div class="card" onclick="showUnits('pedagogy')">Pedagogy</div>
-        <div class="card" onclick="showUnits('psychology')">Educational Psychology</div>
-        <div class="card" onclick="showUnits('english')">English Teaching</div>
-        <div class="card" onclick="showUnits('tamil')">Tamil Teaching</div>
+        <div class="card" onclick="showUnits('psychology')">Psychology</div>
+        <div class="card" onclick="showUnits('english')">English</div>
+        <div class="card" onclick="showUnits('tamil')">Tamil</div>
         <div class="card" onclick="showUnits('assessment')">Assessment</div>
     </div>`;
 }
@@ -203,7 +195,7 @@ function createCard(q) {
     <div class="card">
         <b>10 Mark ${q.toUpperCase()}</b>
         <p style="font-size:13px;color:#64748b;">Easy explanation + example</p>
-        <button class="btn" onclick="loadAnswer('${q}')">Read More</button>
+        <button class="btn" onclick="openAnswer('${q}')">Read More</button>
         <button class="btn" onclick="copyLink('${link}')">Copy Link</button>
     </div>`;
 }
@@ -220,6 +212,11 @@ function formatText(text) {
 }
 
 /* ---------- LOAD ANSWER ---------- */
+
+function openAnswer(q) {
+    isSharedView = false;
+    loadAnswer(q);
+}
 
 function loadAnswer(q) {
 
@@ -246,7 +243,15 @@ function loadAnswer(q) {
         </div>`;
     })
     .catch(() => {
-        app.innerHTML = `<div class="content">❌ Answer not available</div>`;
+
+        let backBtn = isSharedView ? "" :
+        `<div class="back" onclick="showQuestions(state.unit)">⬅ Back</div>`;
+
+        app.innerHTML = `
+        ${backBtn}
+        <div class="content">
+            ❌ Answer not available
+        </div>`;
     });
 }
 
@@ -282,7 +287,6 @@ function loadFromURL() {
     }
 }
 
-/* INIT */
 loadFromURL();
 
 </script>

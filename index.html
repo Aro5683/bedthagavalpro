@@ -7,7 +7,7 @@
 
 <style>
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background: #0f172a;
     color: white;
@@ -16,6 +16,8 @@ body {
 header {
     padding: 15px;
     text-align: center;
+    font-size: 22px;
+    font-weight: bold;
     background: #1e293b;
 }
 
@@ -29,19 +31,39 @@ header {
 .card {
     background: #1e293b;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 12px;
     cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
 }
-
-.content {
-    padding: 20px;
+.card:hover {
+    background: #334155;
+    transform: scale(1.05);
 }
 
 .back {
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
-    color: skyblue;
+    color: #38bdf8;
+}
+
+.content {
+    background: #14532d;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+h2 {
+    color: #bbf7d0;
+}
+
+blockquote {
+    border-left: 4px solid #86efac;
+    padding-left: 12px;
+    margin: 10px 0;
+    color: #d1fae5;
 }
 </style>
 </head>
@@ -56,11 +78,9 @@ header {
 
 let app = document.getElementById("app");
 
-/* ---------- STEP DATA ---------- */
-
 let state = {};
 
-/* ---------- UI ---------- */
+/* ---------- NAVIGATION ---------- */
 
 function showSubjects() {
     app.innerHTML = `
@@ -95,22 +115,50 @@ function showQuestions(unit) {
     `;
 }
 
+/* ---------- FORMATTER ---------- */
+
+function formatText(text) {
+
+    // Escape HTML
+    text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    // Bold
+    text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+
+    // Italic
+    text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
+
+    // Heading (*line*)
+    text = text.replace(/^<i>(.*?)<\/i>$/gm, "<h2>$1</h2>");
+
+    // Blockquote
+    text = text.replace(/^&gt; ?(.*)$/gm, "<blockquote>$1</blockquote>");
+
+    // Line breaks
+    text = text.replace(/\n/g, "<br>");
+
+    return text;
+}
+
 /* ---------- LOAD ANSWER ---------- */
 
 function loadAnswer(q) {
 
-    let path = `content/sem1-${state.subject}-${state.unit}-${q}.html`;
+    let path = `content/sem1-${state.subject}-${state.unit}-${q}.txt`;
 
     fetch(path)
     .then(res => res.text())
     .then(data => {
+
+        let formatted = formatText(data);
+
         app.innerHTML = `
         <div class="back" onclick="showQuestions(state.unit)">⬅ Back</div>
-        <div class="content">${data}</div>
+        <div class="content">${formatted}</div>
         `;
     })
     .catch(() => {
-        app.innerHTML = "<p>Content not found</p>";
+        app.innerHTML = "<p style='padding:20px;'>Content not found ❌</p>";
     });
 }
 

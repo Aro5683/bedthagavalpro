@@ -9,61 +9,89 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #0f172a;
-    color: white;
+    background: #f8fafc;
+    color: #0f172a;
 }
 
+/* HEADER */
 header {
     padding: 15px;
     text-align: center;
     font-size: 22px;
     font-weight: bold;
-    background: #1e293b;
+    background: linear-gradient(to right, #e0f2fe, #bae6fd);
+    color: #0369a1;
 }
 
+/* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
     padding: 20px;
 }
 
+/* CARD */
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     cursor: pointer;
-    text-align: center;
     transition: 0.3s;
 }
 .card:hover {
-    background: #334155;
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
+/* PREVIEW */
+.preview {
+    font-size: 14px;
+    color: #475569;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #38bdf8;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* BACK */
 .back {
     padding: 15px;
     cursor: pointer;
-    color: #38bdf8;
+    color: #0284c7;
 }
 
+/* CONTENT */
 .content {
-    background: #14532d;
-    padding: 15px;
+    padding: 20px;
+    background: white;
     margin: 15px;
+    border-radius: 15px;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0ea5e9;
+    color: white;
+    padding: 10px 20px;
     border-radius: 10px;
-    line-height: 1.7;
+    opacity: 0;
+    transition: 0.3s;
 }
-
-h2 {
-    color: #bbf7d0;
-}
-
-blockquote {
-    border-left: 4px solid #86efac;
-    padding-left: 12px;
-    margin: 10px 0;
-    color: #d1fae5;
+.popup.show {
+    opacity: 1;
 }
 </style>
 </head>
@@ -73,23 +101,45 @@ blockquote {
 <header>B.Ed Smart Notes</header>
 
 <div id="app"></div>
+<div id="popup" class="popup">Link Copied 🔗</div>
 
 <script>
 
 let app = document.getElementById("app");
+let popup = document.getElementById("popup");
 
 let state = {};
 
-/* ---------- NAVIGATION ---------- */
+/* ---------- LANGUAGE ---------- */
+
+function showLanguage() {
+    app.innerHTML = `
+    <div class="grid">
+        <div class="card" onclick="selectLang('english')">English Medium</div>
+        <div class="card" onclick="selectLang('tamil')">தமிழ் Medium</div>
+    </div>`;
+}
+
+function selectLang(lang) {
+    state.lang = lang;
+    showSubjects();
+}
+
+/* ---------- SUBJECTS ---------- */
 
 function showSubjects() {
     app.innerHTML = `
+    <div class="back" onclick="showLanguage()">⬅ Back</div>
     <div class="grid">
-        <div class="card" onclick="showUnits('pedagogy')">Pedagogy</div>
-        <div class="card" onclick="showUnits('psychology')">Psychology</div>
-    </div>
-    `;
+        <div class="card" onclick="showUnits('pedagogy')">Pedagogy of Teaching</div>
+        <div class="card" onclick="showUnits('psychology')">Educational Psychology</div>
+        <div class="card" onclick="showUnits('english')">English Teaching</div>
+        <div class="card" onclick="showUnits('tamil')">Tamil Teaching</div>
+        <div class="card" onclick="showUnits('assessment')">Assessment & Evaluation</div>
+    </div>`;
 }
+
+/* ---------- UNITS ---------- */
 
 function showUnits(subject) {
     state.subject = subject;
@@ -99,9 +149,10 @@ function showUnits(subject) {
     <div class="grid">
         <div class="card" onclick="showQuestions('unit1')">Unit 1</div>
         <div class="card" onclick="showQuestions('unit2')">Unit 2</div>
-    </div>
-    `;
+    </div>`;
 }
+
+/* ---------- QUESTIONS (PREVIEW MODE) ---------- */
 
 function showQuestions(unit) {
     state.unit = unit;
@@ -109,34 +160,35 @@ function showQuestions(unit) {
     app.innerHTML = `
     <div class="back" onclick="showUnits(state.subject)">⬅ Back</div>
     <div class="grid">
-        <div class="card" onclick="loadAnswer('q1')">10 Mark Question 1</div>
-        <div class="card" onclick="loadAnswer('q2')">10 Mark Question 2</div>
-    </div>
-    `;
+
+        ${createCard('q1')}
+        ${createCard('q2')}
+
+    </div>`;
 }
 
-/* ---------- FORMATTER ---------- */
+/* ---------- CARD WITH PREVIEW ---------- */
+
+function createCard(q) {
+    let link = getLink(q);
+
+    return `
+    <div class="card">
+        <b>10 Mark ${q.toUpperCase()}</b>
+        <div class="preview">Simple explanation with example...</div>
+        <button class="btn" onclick="loadAnswer('${q}')">Read More</button>
+        <button class="btn" onclick="copyLink('${link}')">Copy Link</button>
+    </div>`;
+}
+
+/* ---------- FORMAT ---------- */
 
 function formatText(text) {
-
-    // Escape HTML
     text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-
-    // Bold
     text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-
-    // Italic
-    text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
-
-    // Heading (*line*)
-    text = text.replace(/^<i>(.*?)<\/i>$/gm, "<h2>$1</h2>");
-
-    // Blockquote
+    text = text.replace(/\*(.*?)\*/g, "<h3>$1</h3>");
     text = text.replace(/^&gt; ?(.*)$/gm, "<blockquote>$1</blockquote>");
-
-    // Line breaks
     text = text.replace(/\n/g, "<br>");
-
     return text;
 }
 
@@ -144,26 +196,58 @@ function formatText(text) {
 
 function loadAnswer(q) {
 
-    let path = `content/sem1-${state.subject}-${state.unit}-${q}.txt`;
+    let path = `content/${state.lang}/sem1-${state.subject}-${state.unit}-${q}.txt`;
 
     fetch(path)
     .then(res => res.text())
     .then(data => {
 
-        let formatted = formatText(data);
+        let link = getLink(q);
 
         app.innerHTML = `
         <div class="back" onclick="showQuestions(state.unit)">⬅ Back</div>
-        <div class="content">${formatted}</div>
-        `;
-    })
-    .catch(() => {
-        app.innerHTML = "<p style='padding:20px;'>Content not found ❌</p>";
+        <div class="content">
+            ${formatText(data)}
+            <br><br>
+            <button class="btn" onclick="copyLink('${link}')">Copy Link 🔗</button>
+        </div>`;
     });
 }
 
-/* INIT */
-showSubjects();
+/* ---------- LINK SYSTEM ---------- */
+
+function getLink(q) {
+    return `${location.origin}${location.pathname}?lang=${state.lang}&sub=${state.subject}&unit=${state.unit}&q=${q}`;
+}
+
+/* ---------- COPY ---------- */
+
+function copyLink(link) {
+    navigator.clipboard.writeText(link);
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2000);
+}
+
+/* ---------- LOAD FROM URL ---------- */
+
+function loadFromURL() {
+    let params = new URLSearchParams(window.location.search);
+
+    if (params.get("q")) {
+        state.lang = params.get("lang");
+        state.subject = params.get("sub");
+        state.unit = params.get("unit");
+
+        loadAnswer(params.get("q"));
+    } else {
+        showLanguage();
+    }
+}
+
+loadFromURL();
 
 </script>
 

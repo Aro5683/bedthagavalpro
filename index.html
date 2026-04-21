@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>B.Ed Smart Notes</title>
+<title>B.Ed தகவல்கள்</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -206,7 +206,7 @@ function createCard(q) {
 function formatText(text) {
     text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-    text = text.replace(/\*(.*?)\*/g, "<h3>$1</h3>");
+    text = text.replace(/\*(.*?)\*/g, "<h3 style='margin:0'>$1</h3>");
     text = text.replace(/^&gt; ?(.*)$/gm, "<blockquote>$1</blockquote>");
     text = text.replace(/\n/g, "<br>");
     return text;

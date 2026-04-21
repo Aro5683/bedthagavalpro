@@ -1,78 +1,74 @@
-<h2>NGOs Working for Child Rights</h2>
-<p>
+# NGOs Working for Child Rights
+
 Children are the most important part of our world's future. However, not all children get equal opportunities or a safe environment. While the government creates many laws, NGOs (Non-Governmental Organizations) act as the bridge that ensures these benefits actually reach children in every corner of society.
-</p>
 
-<h3>What is an NGO?</h3>
-<p>
+## What is an NGO?
+
 An NGO is a voluntary organization that functions independently of the government for social welfare. It is a non-profit entity.
-</p>
 
-<h3>Their Role in Tamil Nadu:</h3>
-<p>
+## Their Role in Tamil Nadu:
+
 In Tamil Nadu, these organizations excel in various fields, such as eradicating child labor, providing quality education, and rehabilitating children with disabilities.
-</p>
-<p>
+
 Essentially, if a child is working instead of going to school, or if a child lacks necessary medical facilities, these organizations step in directly to restore their rights.
-</p>
 
-<h3>12 Important NGOs for Children in Tamil Nadu</h3>
+## 12 Important NGOs for Children in Tamil Nadu
 
-<h4>1. CCRD (Centre for Child Rights and Development)</h4>
-<p><b>Established:</b> 1988 in Chennai.</p>
-<p><b>What they do:</b> They act as a 'Resource Centre.' They provide training to smaller NGOs and offer consultations and advice to the government.</p>
-<p><b>Example:</b> If a new group starts fighting for child rights in a village, CCRD will teach and guide them on how to operate.</p>
+## 1. CCRD (Centre for Child Rights and Development)
+**Established:** 1988 in Chennai  
+**What they do:** They act as a Resource Centre. They provide training to smaller NGOs and offer consultations and advice to the government.  
+> Example: If a new group starts fighting for child rights in a village, CCRD will teach and guide them on how to operate.
 
-<h4>2. Hand in Hand</h4>
-<p><b>Location:</b> Kanchipuram.</p>
-<p><b>What they do:</b> Their main goal is to eliminate child labor. They also provide shelter and education for underprivileged women and children.</p>
-<p><b>Example:</b> If a young boy is found working in a tea shop or firecracker factory, they rescue him and enroll him in school.</p>
+## 2. Hand in Hand
+**Location:** Kanchipuram  
+**What they do:** Their main goal is to eliminate child labor. They also provide shelter and education for underprivileged women and children.  
+> Example: If a young boy is found working in a tea shop or factory, they rescue him and enroll him in school.
 
-<h4>3. Eureka Child</h4>
-<p><b>What they do:</b> They provide education for rural children. Beyond teaching, they provide books, toys, stationery, and food.</p>
-<p><b>Example:</b> Making subjects like Tamil, Maths, and Science fun and easy to understand for a boy in a remote village, while providing all his school supplies.</p>
+## 3. Eureka Child
+**What they do:** They provide education for rural children along with books, toys, stationery, and food.  
+> Example: Making subjects like Tamil, Maths, and Science easy and fun for rural students.
 
-<h4>4. Sri Sakthi Trust</h4>
-<p><b>Established:</b> 2001 in Dindigul.</p>
-<p><b>What they do:</b> They create awareness about sanitation in rural areas. They teach the importance of hygiene and cleanliness.</p>
-<p><b>Example:</b> Visiting villages to campaign for cleanliness and encouraging parents to keep their children in school.</p>
+## 4. Sri Sakthi Trust
+**Established:** 2001 in Dindigul  
+**What they do:** They create awareness about sanitation and hygiene in rural areas.  
+> Example: Campaigning for cleanliness and encouraging school attendance.
 
-<h4>5. Kaakkum Karangal (Guiding Hands)</h4>
-<p><b>Established:</b> 1992 in Chennai.</p>
-<p><b>What they do:</b> It serves as a large home for orphaned children and abandoned elderly people. They provide food, shelter, medical care, and education.</p>
-<p><b>Example:</b> Bringing in a homeless child, providing them with care and clothes, and paving the way for a better life.</p>
+## 5. Kaakkum Karangal (Guiding Hands)
+**Established:** 1992 in Chennai  
+**What they do:** Provides shelter, food, education, and medical care for orphaned children and the elderly.  
+> Example: Helping homeless children rebuild their lives.
 
-<h4>6. Bhumi</h4>
-<p><b>Network:</b> Driven by thousands of young volunteers.</p>
-<p><b>What they do:</b> They provide education to orphaned and underprivileged children in backward areas.</p>
-<p><b>Example:</b> A college student spending weekends teaching English to children in an orphanage.</p>
+## 6. Bhumi
+**Network:** Volunteer-driven organization  
+**What they do:** Provides education to underprivileged children.  
+> Example: College students teaching children in orphanages.
 
-<h4>7. Mithra</h4>
-<p><b>Established:</b> 1977 in Chennai.</p>
-<p><b>What they do:</b> They work for children with disabilities. They provide free education up to age 16.</p>
-<p><b>Example:</b> Giving personalized attention to children with physical or speech difficulties.</p>
+## 7. Mithra
+**Established:** 1977 in Chennai  
+**What they do:** Supports children with disabilities with free education.  
+> Example: Personalized care for children with physical or speech challenges.
 
-<h4>8. Agaram Foundation</h4>
-<p><b>Founder:</b> Actor Suriya (2006).</p>
-<p><b>What they do:</b> They fund higher education for deserving students and provide personality development.</p>
-<p><b>Example:</b> Supporting a high-scoring student who cannot afford college.</p>
+## 8. Agaram Foundation
+**Founder:** Actor Suriya (2006)  
+**What they do:** Funds higher education and provides skill development.  
+> Example: Supporting students who cannot afford college.
 
-<h4>9. Save the Children</h4>
-<p><b>Scope:</b> Global organization based in London.</p>
-<p><b>What they do:</b> Focus on children's health, safety, and education, especially during disasters.</p>
-<p><b>Example:</b> Providing relief and medical aid after natural disasters.</p>
+## 9. Save the Children
+**Scope:** Global organization  
+**What they do:** Works on child health, safety, and education, especially during disasters.  
+> Example: Providing relief during floods or cyclones.
 
-<h4>10. Amar Seva Sangam</h4>
-<p><b>Location:</b> Ayikudi, Tenkasi.</p>
-<p><b>What they do:</b> Support children and people with disabilities in rural areas.</p>
-<p><b>Example:</b> Providing wheelchairs and vocational training.</p>
+## 10. Amar Seva Sangam
+**Location:** Ayikudi, Tenkasi  
+**What they do:** Supports children and people with disabilities in rural areas.  
+> Example: Providing wheelchairs and vocational training.
 
-<h4>11. EKAM Foundation</h4>
-<p><b>Mission:</b> Every child deserves healthcare.</p>
-<p><b>What they do:</b> Provide medical aid to newborns and pregnant women.</p>
-<p><b>Example:</b> Funding life-saving surgeries for babies.</p>
+## 11. EKAM Foundation
+**Mission:** Every child deserves healthcare  
+**What they do:** Provides medical aid to newborns and mothers.  
+> Example: Funding life-saving surgeries.
 
-<h4>12. Annai Charitable & Educational Trust</h4>
-<p><b>Founders:</b> Joseph Xavier and Amala Naayagi.</p>
-<p><b>What they do:</b> Support poor communities, women, and children with education and livelihood.</p>
-<p><b>Example:</b> Helping underprivileged children get education and stability.</p>
+## 12. Annai Charitable & Educational Trust
+**Founders:** Joseph Xavier and Amala Naayagi  
+**What they do:** Supports poor communities, women, and children through education and livelihood programs.  
+> Example: Helping underprivileged children build stable futures.

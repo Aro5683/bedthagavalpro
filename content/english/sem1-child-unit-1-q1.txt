@@ -1,26 +1,55 @@
-**Millennium Development Goals (MDGs) - ஒரு எளிமையான விளக்கம்**
 
-நாம ஏற்கனவே பார்த்த **SDGs** (2015-2030) வர்றதுக்கு முன்னாடி, 2000-வது வருஷத்துல உலக நாடுகள் எல்லாம் சேர்ந்து போட்ட பிளான் தான் இந்த **MDGs**. இது 2015 வரைக்கும் நடைமுறையில இருந்தது.
-
-இதைச் சுருக்கமா **"8 சூப்பர் குறிக்கோள்கள்"** அப்படின்னு சொல்லலாம்.
-
-#### **அந்த 8 குறிக்கோள்கள் (நிஜ கால உதாரணங்களோடு):**
-
-1. **கடுமையான வறுமை மற்றும் பசியை ஒழித்தல்:** * ஒரு நாளைக்கு 100 ரூபாய் கூட சம்பாதிக்க முடியாம கஷ்டப்படுறவங்க எண்ணிக்கையை பாதியா குறைக்கணும். யாருமே பசியோட தூங்கக்கூடாது.
-2. **அனைவருக்கும் ஆரம்பக் கல்வி:** * உலகத்துல இருக்குற எல்லா குழந்தைகளும் (பசங்க, பொண்ணுங்க எல்லாரும்) அட்லீஸ்ட் 5-வது வரைக்காவது கண்டிப்பா படிக்கணும்.
-3. **பெண் கல்வி மற்றும் சமத்துவம்:** * ஸ்கூல்லயும் சரி, காலேஜ்லயும் சரி பொண்ணுங்களுக்கும் சரிசமமான வாய்ப்பு கொடுக்கணும். 4. **குழந்தை இறப்பு விகிதத்தைக் குறைத்தல்:** * அஞ்சு வயசுக்கு உட்பட்ட குழந்தைகள் சத்துணவு இல்லாமலோ இல்ல நோயாலோ இறந்து போகாம பாத்துக்கணும்.
-5. **தாய்மார்கள் ஆரோக்கியத்தை மேம்படுத்துதல்:** * பிரசவ நேரத்துல எந்தத் தாய்க்கும் உயிருக்கு ஆபத்து வராம, நல்ல மருத்துவ வசதி செஞ்சு கொடுக்கணும். 6. **நோய்களுக்கு எதிரான போராட்டம்:** * எய்ட்ஸ் (HIV/AIDS), மலேரியா போன்ற கொடிய நோய்கள் பரவாம தடுக்கணும், அதுக்கு மருந்து மாத்திரைகள் எல்லாருக்கும் கிடைக்கணும்.
-7. **சுற்றுச்சூழல் பாதுகாப்பு:** * காடுகளை அழிக்காம பாத்துக்கணும். எல்லாருக்கும் சுத்தமான குடிதண்ணீரும், கழிவறை வசதியும் கிடைக்கணும்.
-8. **உலகளாவிய கூட்டுறவு:** * ஏழை நாடுகளுக்குப் பணக்கார நாடுகள் உதவி பண்ணனும். டெக்னாலஜி மற்றும் மருந்துகளை மலிவான விலையில எல்லா நாடுகளும் பகிர்ந்துக்கணும்.
-
----
-
-### **MDG-க்கும் SDG-க்கும் என்ன வித்தியாசம்?**
-
-இதைக் கேட்டா நீங்க சிம்பிளா ஒரு எக்ஸாம்பிள் சொல்லலாம்:
-* **MDG** ஒரு 'பேசிக் பிளான்' (Basic Plan) மாதிரி. இது முக்கியமா ஏழை நாடுகளோட அடிப்படைத் தேவைகளை (சாப்பாடு, கல்வி) மட்டும் கவனிச்சது.
-* **SDG** ஒரு 'அட்வான்ஸ் பிளான்' (Advanced Plan) மாதிரி. இது ஏழை, பணக்காரன் அப்படின்னு பாகுபாடு இல்லாம மொத்த உலகத்தோட வளர்ச்சி, இயற்கை பாதுகாப்பு, அமைதி எல்லாத்தையும் சேர்த்துப் பேசுது.
-
-**எக்ஸாம் டிப்ஸ்:** எக்ஸாம்ல எழுதும்போது, "2000-ல ஆரம்பிச்சு 2015-ல முடிஞ்சது MDGs, அதுக்கப்புறம் வந்தது தான் SDGs" அப்படின்னு மென்ஷன் பண்ணுங்க. அப்புறம் இந்த 8 பாயிண்ட்டுகளையும் எழுதினா முழு மார்க் நிச்சயம்!
-
-உங்களுக்கு இதில வேற ஏதாவது சந்தேகம் இருக்கா? இல்ல அடுத்த டாபிக் போலாமா?
+ *NGOs Working for Child Rights*
+Children are the most important part of our world's future. However, not all children get equal opportunities or a safe environment. While the government creates many laws, *NGOs (Non-Governmental Organizations)* act as the bridge that ensures these benefits actually reach children in every corner of society.
+*What is an NGO?*
+An NGO is a voluntary organization that functions independently of the government for social welfare. It is a *non-profit* entity.
+*Their Role in Tamil Nadu:*
+In Tamil Nadu, these organizations excel in various fields, such as eradicating child labor, providing quality education, and rehabilitating children with disabilities.
+Essentially, if a child is working instead of going to school, or if a child lacks necessary medical facilities, these organizations step in directly to restore their rights.
+*12 Important NGOs for Children in Tamil Nadu*
+*1. CCRD (Centre for Child Rights and Development)*
+ *Established:* 1988 in Chennai.
+*What they do:* They act as a *'Resource Centre.'* They provide training to smaller NGOs and offer consultations and advice to the government.
+ *Example:* If a new group starts fighting for child rights in a village, CCRD will teach and guide them on how to operate.
+*2. Hand in Hand*
+ *Location:* Kanchipuram.
+ *What they do:* Their main goal is to **eliminate child labor.* They also provide shelter and education for underprivileged women and children.
+ *Example:* If a young boy is found working in a tea shop or firecracker factory, they rescue him and enroll him in school.
+*3. Eureka Child*
+*What they do:* They provide education for rural children. Beyond teaching, they provide books, toys, stationery, and food.
+ *Example:* Making subjects like Tamil, Maths, and Science fun and easy to understand for a boy in a remote village, while providing all his school supplies.
+*4. Sri Sakthi Trust*
+ *Established:* 2001 in Dindigul.
+ *What they do:* They create awareness about *'Sanitation'* in rural areas. They teach the importance of handwashing, bathing, and keeping the environment clean.
+ *Example:* Visiting villages to campaign for cleanliness and encouraging parents to keep their children in school.
+*5. Kaakkum Karangal (Guiding Hands)*
+ *Established:* 1992 in Chennai.
+ *What they do:* It serves as a large home for orphaned children on the streets and abandoned elderly people. They provide food, shelter, medical care, and education.
+ *Example:* Bringing in a homeless child, providing them with care and clothes, and paving the way for a better life.
+*6. Bhumi*
+ *Network:* Driven by thousands of young, energetic *volunteers.*
+ *What they do:* They provide education to orphaned and underprivileged children in backward areas.
+ *Example:* A college student spending their weekends teaching English to children in an orphanage.
+*7. Mithra*
+ *Established:* 1977 in Chennai.
+ *What they do:* They work specifically for *children with disabilities** (both physical and mental). They provide free education up to age 16.
+ *Example:* Giving personalized attention to children who have difficulty walking or speaking to help them progress in life.
+*8. Agaram Foundation*
+ *Founder:* Founded by actor *Suriya* in 2006.
+ *What they do:* They pay college fees for students who excel in studies but lack financial means. They also provide personality development classes.
+ *Example:* Adopting a girl who scored high marks in the 12th grade but cannot afford college, and supporting her until she becomes a professional.
+*9. Save the Children*
+*Scope:* A global organization based in London.
+ *What they do:* They assist in children's health, safety, and education. They are especially active during *disasters* (like tsunamis or floods).
+*Example:* If a cyclone destroys an area, they immediately provide medical check-ups and food for the affected children.
+*10. Amar Seva Sangam*
+ *Location:* Ayikudi Village, Tenkasi (formerly Tirunelveli).
+*What they do:* They work for people and children with disabilities in rural areas, planning with the community to improve their lives.
+ *Example:* Providing mobility aids (like wheelchairs) and vocational training to a person with a physical disability so they can live independently.
+ *11. EKAM Foundation*
+ *Mission:* Their policy is *"Every child deserves healthcare."* They provide medical aid to newborns and pregnant women from underprivileged families.
+ *Example:* Funding a life-saving surgery for a baby born into a family that cannot afford the medical costs.
+*12. Annai Charitable & Educational Trust**
+ *Founders:* Joseph Xavier and Amala Naayagi.
+*What they do:* They serve the oppressed, the poor, women, and persons with disabilities.
+ *Example:* Helping children from the most socially backward families get an education and establishing a stable livelihood for them.

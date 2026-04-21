@@ -6,7 +6,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ---------- MARKDOWN STYLING FIX ---------- */
 
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0369a1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0284c7;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Better spacing */
+.content {
+    line-height: 1.8;
+}
+
+/* Bold highlight */
+strong {
+    color: #0f172a;
+}
 /* ---------- BASE ---------- */
 body {
     margin: 0;
@@ -233,8 +270,7 @@ function loadAnswer(q) {
         app.innerHTML = `
         ${backBtn}
         <div class="content">
-            ${formatText(data)}
-            <br><br>
+          ${formatText(data)}
             <button class="btn" onclick="copyLink('${link}')">Copy Link 🔗</button>
         </div>`;
     })

@@ -115,7 +115,7 @@ blockquote {
 
 <!-- HEADER -->
 <div class="header-box">
-    <div class="header-title">B.Ed Smart Notes</div>
+    <div class="header-title">B.Ed தகவல்கள்</div>
     <div class="header-sub">Fast • Clear • Exam Ready</div>
 </div>
 
@@ -204,12 +204,7 @@ function createCard(q) {
 /* ---------- FORMAT ---------- */
 
 function formatText(text) {
-    text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-    text = text.replace(/\*(.*?)\*/g, "<h3 style='margin:0'>$1</h3>");
-    text = text.replace(/^&gt; ?(.*)$/gm, "<blockquote>$1</blockquote>");
-    text = text.replace(/\n/g, "<br>");
-    return text;
+    return marked.parse(text);
 }
 
 /* ---------- LOAD ANSWER ---------- */
@@ -291,6 +286,6 @@ function loadFromURL() {
 loadFromURL();
 
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>

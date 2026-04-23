@@ -1,0 +1,114 @@
+## How to Construct a Diagnostic Test
+
+In simple terms, just like a doctor uses a blood test to identify a patient’s illness, a **diagnostic test** is used to find out exactly where a student is facing difficulty in a subject.
+
+## Steps in Constructing a Diagnostic Test
+
+### 1. Planning
+
+First, decide **for whom the test is intended**.
+
+Usually, these tests are given to students who score very low marks in regular tests (achievement tests)—often the **bottom 10%**, referred to as *“backward in learning.”*
+
+**Example:**  
+If more than half of the class makes mistakes in converting **Centigrade to Fahrenheit**, it means there is a problem in that specific concept.
+
+
+### 2. Writing the Test Items
+
+This is the most important step.
+
+Break a big topic into **small learning points**.
+
+**Example (Thermometer topic):**
+- Do students know the **Lower Fixed Point**?
+- Do they know the **Upper Fixed Point**?
+- Do they know the formula:
+
+F = (C × 9/5) + 32
+
+Ask only:
+- Very short answer questions  
+- Objective-type questions (MCQs)
+
+❌ Avoid long essay-type questions.
+
+
+### 3. Assembling the Question Paper
+
+Arrange questions in a proper sequence:
+- Start from **easy (known)**  
+- Move towards **difficult (unknown)**  
+
+
+### 4. Giving Clear Instructions
+
+Students should not feel afraid.
+
+Make it clear:
+- This is **not for grading or failing**
+- It is only to understand **what they have not learned**
+
+Allow them to:
+- Write **slowly and comfortably**
+- Not worry too much about time limits
+
+
+### 5. Scoring Key & Marking Scheme
+
+Give marks for **each small step**.
+
+This helps the teacher identify:
+- Whether the student made a mistake in the **formula**
+- Or in **calculation (addition/subtraction, etc.)**
+
+
+## Diagnosis and Remedial Measures
+
+After the test, prepare a **Diagnostic Table**:
+
+| Student Name | Q1 | Q2 | ... | Q15 | Q16 |
+|--------------|----|----|-----|-----|-----|
+| Student A    | ✅ | ✅ |     | ❌  | ❌  |
+
+From this table, you can easily identify:
+- Which questions most students got wrong
+
+**Example Insight:**  
+If many students got Questions 15 and 16 wrong, the teacher may conclude:
+
+> Students do not understand the **BODMAS rule**, which is causing calculation errors.
+
+
+## Remedial Measures (Solutions)
+
+Now that the problem is identified:
+
+❌ Do NOT reteach the entire lesson from the beginning  
+
+✔ Instead:
+- Reteach only the **problem area**
+- Give more **examples and practice**
+- Use a **different teaching method** if needed
+
+
+## Important Concept: Item Analysis
+
+A good test should not be:
+- Too easy ❌  
+- Too difficult ❌  
+
+This is checked using **Difficulty Level (DL)**.
+
+- Ideal value: **0.50 (moderate difficulty)**
+- Very low value → Question is too difficult → should be removed
+
+
+## In Short
+
+- A **Diagnostic Test** is like using a microscope to find exactly where a student struggles  
+- **Remedial Teaching** is helping the student exactly at that weak point  
+
+
+💡 **Tip for B.Ed Exams:**
+Drawing **mind maps** and **flowcharts** can help you score better marks and present your answer clearly.
